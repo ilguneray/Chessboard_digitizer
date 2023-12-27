@@ -16,7 +16,9 @@ Architecture:
 
 In order to predict chessboard contour corners ,I have modified the fully 
 connected layer of yolov1 architecture such as;
+```
 7x7x1024 --> 512 --> 8 instead of 7x7x1024 --> 4096 --> 7x7x30.
+```
 These 8 output classes represent each corner coordinate of chessboard.
 
 
@@ -26,9 +28,10 @@ Output can be seen below:
 
 ## Piece Detection
 In this section , yolov8 object detection model is used for detection.
+```
 Training    -> @0.5mAP = %99.5
 Validation  -> @0.5mAP = %96
-
+```
 Example after detection can be seen below:
 ![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/obj_detection_1.png)
 
