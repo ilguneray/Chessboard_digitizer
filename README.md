@@ -35,7 +35,8 @@ Example after detection can be seen below:
 
 ## Placement of Pieces to Corresponding Squares
 To be able to calculate chess pieces location weighted center calculation is used with 3/4 rate closet to their bottom pixel values.Then these coordinates are compared with all squares centers coordinates according to MSE error.Chess pieces are placed in the square with the least error rate.As a result current state is represented in array:
-```[['--' '--' '--' 'bq' '--' '--' 'bk' '--']
+```
+[['--' '--' '--' 'bq' '--' '--' 'bk' '--']
  ['--' '--' '--' '--' '--' 'bp' '--' 'bp']
  ['wq' 'bp' 'wb' '--' 'bp' '--' 'bp' '--']
  ['--' '--' '--' '--' '--' '--' '--' '--']
