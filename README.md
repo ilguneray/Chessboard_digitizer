@@ -58,3 +58,11 @@ Output can be seen below:
 
 ![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/chessboard_1.png)
 
+
+
+
+## References
+Thanks to Mr.Georg Wolflein for all dataset. You can also check his github ([here](https://github.com/georg-wolflein/chesscog)).It can be very helpful too.
+
+You can reach dataset [here](https://doi.org/10.17605/OSF.IO/XF3KA)
+
