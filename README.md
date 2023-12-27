@@ -19,7 +19,6 @@ connected layer of yolov1 architecture such as;
 7x7x1024 --> 512 --> 8 instead of 7x7x1024 --> 4096 --> 7x7x30.
 These 8 output classes represent each corner coordinate of chessboard.
 
-https://github.com/ilguneray/Chessboard_digitizer/tree/main/models
 
 Output can be seen below:
 ![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/square_centers_and_corners_1.png)
