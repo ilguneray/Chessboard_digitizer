@@ -12,7 +12,7 @@ The chess corner prediction model is trained with a dataset contains of 5000 che
 
 ## Contour Detection
 Architecture:
-![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/tree/main/models/model_architecture.png)
+![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/models/model_architecture.png)
 
 In order to predict chessboard contour corners ,I have modified the fully 
 connected layer of yolov1 architecture such as;
