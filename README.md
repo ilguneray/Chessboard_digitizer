@@ -12,7 +12,7 @@ The chess corner prediction model is trained with a dataset contains of 5000 che
 
 ## Contour Detection
 Architecture:
-![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/models/model_architecture.png)
+![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/tree/main/models/model_architecture.png)
 
 In order to predict chessboard contour corners ,I have modified the fully 
 connected layer of yolov1 architecture such as;
@@ -24,4 +24,36 @@ Output can be seen below:
 ![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/square_centers_and_corners_1.png)
 
 
+## Piece Detection
+In this section , yolov8 object detection model is used for detection.
+Training    -> @0.5mAP = %99.5
+Validation  -> @0.5mAP = %96
+
+Example after detection can be seen below:
+![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/obj_detection_1.png)
+
+
+## Placement of Pieces to Corresponding Squares
+To be able to calculate chess pieces location weighted center calculation is used with 3/4 rate closet to their bottom pixel values.Then these coordinates are compared with all squares centers coordinates according to MSE error.Chess pieces are placed in the square with the least error rate.As a result current state is represented in array:
+```[['--' '--' '--' 'bq' '--' '--' 'bk' '--']
+ ['--' '--' '--' '--' '--' 'bp' '--' 'bp']
+ ['wq' 'bp' 'wb' '--' 'bp' '--' 'bp' '--']
+ ['--' '--' '--' '--' '--' '--' '--' '--']
+ ['wp' '--' '--' '--' '--' 'wp' '--' '--']
+ ['--' '--' 'wp' '--' '--' '--' 'wp' 'wp']
+ ['--' '--' 'wp' '--' '--' '--' '--' 'wk']
+ ['--' '--' '--' 'bn' '--' '--' '--' '--']]
+```
+
+ ## Fen Conversation
+ Chessboard state in array format is converted to FEN format.
+```
+Fen: 3q2k1/5p1p/QpB1p1p1/8/P4P2/2P3PP/2P4K/3n4
+```
+
+## Saving Result
+Chessboard is converted to png format and saved.
+Output can be seen below:
+
+![Screenshot](https://github.com/ilguneray/Chessboard_digitizer/blob/main/outputs/chessboard_1.png)
 
