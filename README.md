@@ -6,7 +6,7 @@ The chess corner prediction model is trained with a dataset contains of 5000 che
 2. Calculation of square corners.
 3. Piece detection with yolov8.
 4. Combination of pieces and corresponding squares.
-5. Generation FEN notation of chessboard with determined chessborad state.
+5. Generation FEN notation of chessboard with determined chessboard state.
 6. Saving result.
 
 
